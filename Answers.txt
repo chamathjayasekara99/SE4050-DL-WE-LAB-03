@@ -18,4 +18,7 @@ After doing these process from entire image computer identify the edges or trans
 
 
 
-3) 
+3) Model get trained too much for the available dataset therefore the problem of Overfitting rise up and validation error increases after some time  at which point we should stop training our dataset. 
+
+we can prevent overfitting by stop trainning too much , weight decay/ regularization with L1/L2 norm , dropout( randomly swich off links randomly according to certain probability , make weight zero),  use different kind of data set, and use more relavant architecture rather than complex one
+
