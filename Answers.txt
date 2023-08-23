@@ -22,3 +22,7 @@ After doing these process from entire image computer identify the edges or trans
 
 we can prevent overfitting by stop trainning too much , weight decay/ regularization with L1/L2 norm , dropout( randomly swich off links randomly according to certain probability , make weight zero),  use different kind of data set, and use more relavant architecture rather than complex one
 
+Since, gradient descent is very computationaly heavy operation, we would not  tipically  apply
+the entire dataset in each iteration. Randomly select subset of entire dataset
+in each iteration and apply them. This is done to speed up the training without going through entire dataset in each 
+iteration to update the weights
