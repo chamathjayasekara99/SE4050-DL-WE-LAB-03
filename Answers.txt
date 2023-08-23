@@ -1,28 +1,21 @@
-1) 
-The process of convolution includes the application of a small filter, sometimes referred to as a kernel, to an input image.
-This requires performing element-wise multiplication and subsequent summation of the overlapping pixel values. 
-The aforementioned procedure provides a unique output image, commonly denoted as a feature map.
+1) The input signal transition 1 to 0.5 , start from 7 to 9  and again move to 1 from 10 .After applying the filter in the result output it shows the changes in the 
+input signal.Same approached used for images by computer to identify intensity changes of each pixel of an image. consider values 0 -> 12 are pixel values for image [1,1,1,1,1,1,0.5,0.5,0.5,1,1,1] ,and filer is [1,-1] where filter will be applied across  left to right of image pixel vector.Computer does calculations as below.
+
+(1*1)+(1*(-1)) = 0
+-
+-
+-
+6th position
+(1*1)+(1*(0.5)) = 0.5
+-
+-
+-
+9th position
+(0.5*1)+(1*(-1)) =-0.5
+
+Here in 5th to 6th position there is a presence of an edge or transition from darker to lighter pixels , in the other hand from 8th to 9th possion lighter to darker pixels.
+After doing these process from entire image computer identify the edges or transition of an image and identify the image eventually.
 
 
- 
-Imagine you have a 1D signal that represents pixel intensity values along a horizontal line in an image. 
-This signal might have values like:
-
-[19,34,54,120]
-
-To detect edges, you can use a 1D filter like [2,1,-1]. Applying this filter involves sliding it over the signal and computing the convolution at each position. 
-The result at each position represents how much the pixel values change in that neighborhood.
-
-Computation as below
-
-1 position
-(2*19)+(34*1)+(54*(-1)) = 18
-2 position
-(34*2)+(54*1)+(120*(-1)) = -2
-
-Positive results in this context signify a discernible rise in intensity when moving from the left side to the right side, implying the existence of an edge or a transition from darker to lighter pixels. 
-Conversely, negative results show a fall in intensity when moving from the left side to the right side. The image exhibits a gradual shift from lighter to darker pixels..
-
-We need to  continue this process for all positions in the signal to generate an output signal that represents the edges in the original signal.
 
 3) 
