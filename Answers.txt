@@ -1,2 +1,28 @@
-1) sdkfjskdjfksdkfsjdlflkjlfkjldfd
-3) jklsdklfklsdjklfjlksdkfkdfkjkljkjk
+1) 
+The process of convolution includes the application of a small filter, sometimes referred to as a kernel, to an input image.
+This requires performing element-wise multiplication and subsequent summation of the overlapping pixel values. 
+The aforementioned procedure provides a unique output image, commonly denoted as a feature map.
+
+
+ 
+Imagine you have a 1D signal that represents pixel intensity values along a horizontal line in an image. 
+This signal might have values like:
+
+[19,34,54,120]
+
+To detect edges, you can use a 1D filter like [2,1,-1]. Applying this filter involves sliding it over the signal and computing the convolution at each position. 
+The result at each position represents how much the pixel values change in that neighborhood.
+
+Computation as below
+
+1 position
+(2*19)+(34*1)+(54*(-1)) = 18
+2 position
+(34*2)+(54*1)+(120*(-1)) = -2
+
+Positive results in this context signify a discernible rise in intensity when moving from the left side to the right side, implying the existence of an edge or a transition from darker to lighter pixels. 
+Conversely, negative results show a fall in intensity when moving from the left side to the right side. The image exhibits a gradual shift from lighter to darker pixels..
+
+We need to  continue this process for all positions in the signal to generate an output signal that represents the edges in the original signal.
+
+3) 
